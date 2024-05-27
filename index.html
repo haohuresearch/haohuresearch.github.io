@@ -12,28 +12,50 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
         header {
+            background-image: url('background.jpg'); /* 自定义背景图片 */
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
             text-align: center;
-            padding: 50px 0;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
         }
         header p {
             font-size: 1.2em;
         }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
         section {
+            display: none; /* 默认隐藏 */
             margin: 20px 0;
             padding: 20px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section.active {
+            display: block; /* 显示当前激活部分 */
         }
         section h2 {
             margin-top: 0;
@@ -42,53 +64,78 @@
             text-align: center;
             padding: 20px 0;
             background-color: #333;
-            color: #fff;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            color: white;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Hao Hu</h1>
-        <p>Software Developer | Tech Enthusiast | Lifelong Learner</p>
+        <p>USC PhD student | Environmental Engineering</p>
+        <p>Email: <a href="mailto:hao.hu@usc.edu" style="color: white;">hao.hu@usc.edu</a></p>
     </header>
 
+    <nav>
+        <a onclick="showSection('education')">Education</a>
+        <a onclick="showSection('research')">Research</a>
+        <a onclick="showSection('publications')">Publication</a>
+        <a onclick="showSection('honors')">Honors</a>
+        <a onclick="showSection('volunteer')">Volunteer</a>
+    </nav>
+
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Hao Hu, a software developer with a passion for creating innovative solutions. I have a background in computer science and have worked on various projects ranging from web development to machine learning.</p>
+        <section id="education">
+            <h2>Education</h2>
+            <div>
+                <p>2018-2022 Tsinghua University, Nuclear Engineering & Economics, Undergraduate</p>
+                <br>
+                <p>2024-Present University of Southern California, Environmental Engineering, PhD</p>
+                <br>
         </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <p>Download my <a href="resume.pdf" target="_blank">resume</a>.</p>
+        <section id="research">
+            <h2>研究经历</h2>
+            <p>在这里添加你的研究经历和相关图片。</p>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Project 1:</strong> Description of project 1.</li>
-                <li><strong>Project 2:</strong> Description of project 2.</li>
-                <li><strong>Project 3:</strong> Description of project 3.</li>
-            </ul>
+        <section id="publications">
+            <h2>出版物</h2>
+	    <!--在这里添加图片-->
+            <p>在这里添加你的出版物和相关图片。</p>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:hao.hu@example.com">hao.hu@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/haohu" target="_blank">linkedin.com/in/haohu</a></p>
-            <p>GitHub: <a href="https://github.com/haohu" target="_blank">github.com/haohu</a></p>
+        <section id="honors">
+            <h2>曾获荣誉</h2>
+            <p>在这里添加你的曾获荣誉和相关图片。</p>
+        </section>
+
+        <section id="volunteer">
+            <h2>志愿活动</h2>
+            <p>在这里添加你的志愿活动和相关图片。</p>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2024 Hao Hu. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showSection(id) {
+            // 隐藏所有部分
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // 显示选定部分
+            var sectionToShow = document.getElementById(id);
+            sectionToShow.classList.add('active');
+        }
+
+        // 默认显示第一个部分
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('education');
+        });
+    </script>
 </body>
 </html>
