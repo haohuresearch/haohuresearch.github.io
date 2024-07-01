@@ -122,7 +122,7 @@
         <section id="blog">
             <h2>Blog</h2>
             <p>Welcome to my blog! Here, I will share my thoughts, experiences, and updates on my research and projects.</p>
-            {% include myblog.md %}
+            <div id="blog-content"></div> <!-- 用于显示Markdown内容 -->
         </section>
     </div>
 
@@ -130,6 +130,7 @@
         <p>&copy; 2024 Hao Hu. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         function showSection(id) {
             // 隐藏所有部分
@@ -141,6 +142,20 @@
             // 显示选定部分
             var sectionToShow = document.getElementById(id);
             sectionToShow.classList.add('active');
+
+            // 如果显示的是blog部分，加载Markdown文件内容
+            if (id === 'blog') {
+                loadMarkdown('myblog.md');
+            }
+        }
+
+        function loadMarkdown(file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('blog-content').innerHTML = marked(text);
+                })
+                .catch(error => console.error('Error fetching markdown file:', error));
         }
 
         // 默认显示第一个部分
