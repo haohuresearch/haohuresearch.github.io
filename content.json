@@ -10,6 +10,7 @@
     "scholar": "https://scholar.google.com/citations?user=aYDbQJgAAAAJ&hl=en",
     "linkedin": "https://www.linkedin.com/in/hao-hu-usc/",
     "github": "https://github.com/haohuresearch",
+    "小红书": "https://xhslink.cn/o/7szWcxAXHuD",
     "updated": "October 2026"
   },
   "about": [
@@ -28,7 +29,7 @@
       "date": "2026/10",
       "text": "The California’s Fifth Climate Change Assessment: Los Angeles Regional Report (2026), which I contributed to as an author, is now available online!",
       "url": "https://climateassessment.ca.gov/2795/",
-      "image": "",
+      "image": "assets/img/5th_CA_CC_LA.png",
       "image_alt": "",
       "image_caption": ""
     },
