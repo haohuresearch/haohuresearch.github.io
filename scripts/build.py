@@ -98,6 +98,11 @@ services=heading('services','Services')+'<h3>Journal reviewing</h3><p>I have rev
 services+=''.join(entry(n['title'],'',n['dates'],n['detail']) for n in data['services']['teaching'])
 awards=heading('awards','Honors and awards')+'<ul class="dated-list awards-list">'+''.join(f'<li><span class="date">{e(n["year"])}</span><span>{e(n["title"])}</span></li>' for n in data['awards'])+'</ul>'
 content=''.join(f'<section class="content-section" aria-labelledby="{anchor}">{body}</section>' for (anchor,_),body in zip(sections,[about,news,education,experience,publications,services,awards]))
+cloudflare_site_token = data.get('analytics', {}).get('cloudflare_site_token', '').strip()
+analytics_script = ''
+if cloudflare_site_token:
+    beacon_config = e(json.dumps({'token': cloudflare_site_token}, separators=(',', ':')))
+    analytics_script = f'<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{beacon_config}"></script>'
 html=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(p['name'])} | {e(p['affiliation'])}</title>
@@ -109,7 +114,7 @@ html=f'''<!doctype html>
 <script src="assets/js/main.js" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><div class="wrapper">{profile}<main id="main">{content}
 <footer class="site-footer"><p>© {e(p['name'])} · Updated {e(p['updated'])}</p><p>Based on {link('https://github.com/qizhang94/qizhang94.github.io','Qi Zhang’s template')} and {link('https://github.com/yaoyao-liu/minimal-light','Minimal Light')}.</p></footer>
-</main></div></body></html>'''
+</main></div>{analytics_script}</body></html>'''
 OUT.mkdir(exist_ok=True)
 shutil.copytree(ROOT/'assets',OUT/'assets',dirs_exist_ok=True)
 (OUT/'index.html').write_text(html,encoding='utf-8')
