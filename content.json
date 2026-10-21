@@ -37,7 +37,7 @@
       "date": "2026/10",
       "text": "I attended SEMICON West 2026 in San Francisco, it is a really amazing conference!",
       "url": "https://registration.semiconwest.org/2026_semicon_west/11411919",
-      "image": "",
+      "image": "assets/img/2026_West_Semi.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -45,7 +45,7 @@
       "date": "2026/07",
       "text": "Our study of emissions from the 2025 Los Angeles fires was accepted by ACS ES&T Air.",
       "url": "https://doi.org/10.1021/acsestair.6c00107",
-      "image": "",
+      "image": "assets/img/EST_Air_1.png",
       "image_alt": "",
       "image_caption": ""
     },
@@ -53,7 +53,7 @@
       "date": "2026/06",
       "text": "Our study of anthropogenic heat in Los Angeles was published in JGR: Atmospheres (co-first author).",
       "url": "https://doi.org/10.1029/2026JD046326",
-      "image": "",
+      "image": "assets/img/JGR_A_2.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -61,7 +61,7 @@
       "date": "2026/05",
       "text": "I am so honored to received the CESASC Jonathan H. Jiang (JHJ) Physics Prize and present my research in the 64th CESASC Annual Convention.",
       "url": "https://cesasc.github.io/scholarship/jhj-prize.html",
-      "image": "",
+      "image": "assets/img/JHJ_Prize.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -69,7 +69,7 @@
       "date": "2026/02",
       "text": "I am so happy that my first research paper was published in *Journal of Geophysical Research: Atmospheres* (JGR: Atmospheres)!",
       "url": "https://doi.org/10.1029/2025JD045318",
-      "image": "",
+      "image": "assets/img/JGR_A_1.jpg",
       "image_alt": "",
       "image_caption": ""
     }
@@ -138,7 +138,7 @@
       "group": "published",
       "url": "https://doi.org/10.1029/2025JD045318",
       "visible": true,
-      "image": "",
+      "image": "assets/img/JGR_A_1.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -150,7 +150,7 @@
       "group": "published",
       "url": "https://doi.org/10.1029/2026JD046326",
       "visible": true,
-      "image": "",
+      "image": "assets/img/JGR_A_2.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -162,7 +162,7 @@
       "group": "published",
       "url": "https://doi.org/10.1021/acsestair.6c00107",
       "visible": true,
-      "image": "",
+      "image": "assets/img/EST_Air_1.png",
       "image_alt": "",
       "image_caption": ""
     },
