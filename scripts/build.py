@@ -48,9 +48,13 @@ publications = heading('publications','Publications','Published and accepted wor
 publications += '''<div class="publication-tools" hidden><div class="filters" role="group" aria-label="Filter publications">'''
 for group,label in [('all','All'),('published','Published / Accepted'),('review','Preprint / Under review'),('preparation','In preparation')]:
     count = len(pubs) if group=='all' else sum(n['group']==group for n in pubs)
+    if count == 0:
+        continue
     publications += f'<button type="button" data-filter="{group}" aria-pressed="{"true" if group=="all" else "false"}">{label} <span>{count}</span></button>'
 publications += '</div><label class="search-label" for="publication-search">Search publications</label><input type="search" id="publication-search" placeholder="Search by title, author, or journal…" autocomplete="off"><p id="publication-count" class="result-count" aria-live="polite"></p></div>'
 for group,label in [('published','Published or accepted'),('review','Preprints and manuscripts under review'),('preparation','Manuscripts in preparation')]:
+    if not any(n['group'] == group for n in pubs):
+        continue
     publications += f'<div class="publication-group" data-group="{group}"><h3>{label}</h3><ol class="publication-list">'
     for n in [n for n in pubs if n['group']==group]:
         authors = e(n['authors']).replace('Hao Hu#','<strong>Hao Hu</strong><sup>#</sup>').replace('Hao Hu','<strong>Hao Hu</strong>')
@@ -72,7 +76,8 @@ html=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(p['name'])} | {e(p['affiliation'])}</title>
 <meta name="description" content="Hao Hu, Ph.D. student at USC. Research on urban climate, data centers, air quality, and climate-resilient energy systems.">
-<meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#173f54">
+<meta name="robots" content="index, follow"><meta name="theme-color" content="#173f54">
+<link rel="canonical" href="https://haohuresearch.github.io/">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/minimal-light.css"><link rel="stylesheet" href="assets/css/custom.css">
 <script src="assets/js/main.js" defer></script></head>
@@ -83,7 +88,8 @@ OUT.mkdir(exist_ok=True)
 shutil.copytree(ROOT/'assets',OUT/'assets',dirs_exist_ok=True)
 (OUT/'index.html').write_text(html,encoding='utf-8')
 (OUT/'.nojekyll').touch()
-(OUT/'robots.txt').write_text('User-agent: *\nDisallow: /\n',encoding='utf-8')
+(OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: https://haohuresearch.github.io/sitemap.xml\n',encoding='utf-8')
+(OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://haohuresearch.github.io/</loc></url></urlset>\n',encoding='utf-8')
 assert len(re.findall(r'<section class="content-section"',html)) == 7
 assert html.count('class="publication"') == len(pubs)
 assert all(f'id="{anchor}"' in html for anchor,_ in sections)

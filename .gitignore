@@ -5,3 +5,4 @@ Thumbs.db
 *.log
 qa/
 scripts/prepare_content.py
+dist/
