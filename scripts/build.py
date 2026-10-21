@@ -20,8 +20,12 @@ def link(url, label, cls=''):
 def heading(anchor, title, subtitle=''):
     return f'<h2 id="{anchor}">{title}</h2>' + (f'<p class="section-note">{e(subtitle)}</p>' if subtitle else '')
 
-def entry(title, sub, dates, detail):
-    return f'<article class="entry"><div class="entry-heading"><h3>{e(title)}</h3><span class="date">{e(dates)}</span></div><p class="entry-sub">{e(sub)}</p><p class="entry-detail">{e(detail)}</p></article>'
+def entry(title, sub, dates, detail, item=None):
+    media = entry_image(item, 'institution') if item else ''
+    classes = 'entry institution-entry has-image' if media else 'entry'
+    return (f'<article class="{classes}">{media}<div class="entry-body">'
+            f'<div class="entry-heading"><h3>{e(title)}</h3><span class="date">{e(dates)}</span></div>'
+            f'<p class="entry-sub">{e(sub)}</p><p class="entry-detail">{e(detail)}</p></div></article>')
 
 def entry_image(item, kind):
     """Optional local thumbnail; keep the full image available without cropping."""
@@ -35,17 +39,46 @@ def entry_image(item, kind):
     image_path = (ROOT / src).resolve()
     if not image_path.is_relative_to((ROOT / 'assets' / 'img').resolve()) or not image_path.is_file():
         raise ValueError('Image file not found under assets/img/: ' + src)
-    alt = item.get('image_alt', '').strip() or item.get('title') or item.get('text', 'Research image')
+    alt = item.get('image_alt', '').strip() or item.get('institution') or item.get('title') or item.get('text', 'Research image')
     caption = item.get('image_caption', '').strip()
     return (f'<figure class="entry-media {kind}-media">'
             f'<a class="image-full-link" href="{e(src)}" target="_blank" rel="noopener" aria-label="View full image: {e(alt)}">'
             f'<img src="{e(src)}" alt="{e(alt)}" width="640" height="400" loading="lazy" decoding="async"></a>'
             + (f'<figcaption>{e(caption)}</figcaption>' if caption else '') + '</figure>')
 
+def research_section(config):
+    """Render only enabled research content; hidden drafts are omitted from HTML."""
+    result = heading('research', e(config.get('title', 'Research')))
+    result += ''.join(f'<p>{e(text)}</p>' for text in config.get('intro', []))
+    result += entry_image(config, 'research-hero')
+    chapters = [chapter for chapter in config.get('chapters', []) if chapter.get('visible', True)]
+    if chapters:
+        result += '<nav class="research-contents" aria-label="Research chapters">'
+        for index, chapter in enumerate(chapters, 1):
+            result += (f'<a href="#research-chapter-{index}"><span class="research-number">{index:02d}</span>'
+                       f'<span class="research-topic">{e(chapter["title"])}</span>'
+                       + (f'<span class="research-summary">{e(chapter["summary"])}</span>' if chapter.get('summary') else '') + '</a>')
+        result += '</nav>'
+    for index, chapter in enumerate(chapters, 1):
+        result += (f'<article class="research-chapter" aria-labelledby="research-chapter-{index}">'
+                   f'<h3 id="research-chapter-{index}">{index}. {e(chapter["title"])}</h3>')
+        result += ''.join(f'<p>{e(text)}</p>' for text in chapter.get('paragraphs', []))
+        if chapter.get('bullets'):
+            result += '<ul class="research-bullets">'+''.join(f'<li>{e(text)}</li>' for text in chapter['bullets'])+'</ul>'
+        gallery = ''.join(entry_image(image, 'research') for image in chapter.get('images', []))
+        if gallery:
+            result += '<div class="research-gallery">'+gallery+'</div>'
+        result += '</article>'
+    return result
+
 p = data['profile']
-sections = [('about','About me'),('news','News'),('education','Education background'),('experience','Work experience'),('publications','Publications'),('services','Services'),('awards','Awards')]
+research_config = data.get('research', {})
+sections = [('about','About me')]
+if research_config.get('visible', False):
+    sections.append(('research','Research'))
+sections += [('news','News'),('education','Education background'),('experience','Work experience'),('publications','Publications'),('services','Services'),('awards','Awards')]
 navigation = ''.join(f'<a href="#{anchor}">{title}</a>' for anchor,title in sections)
-social = ' · '.join(link(p[key],label) for key,label in [('scholar','Google Scholar'),('linkedin','LinkedIn'),('github','GitHub')] if p.get(key))
+social = ' · '.join(link(p[key],label) for key,label in [('scholar','Google Scholar'),('linkedin','LinkedIn'),('github','GitHub'),('xiaohongshu','Xiaohongshu')] if p.get(key))
 profile = f'''<header class="profile" id="profile">
     <a class="portrait-link" href="#about" aria-label="About {e(p['name'])}"><img class="portrait" src="{e(p['portrait'])}" width="154" height="154" alt="{e(p['name'])}" fetchpriority="high"></a>
     <h1>{e(p['name'])}</h1><p class="position">{e(p['position'])}</p>
@@ -58,15 +91,14 @@ profile = f'''<header class="profile" id="profile">
     </header>'''
 
 about = heading('about','About me') + ''.join(f'<p>{e(t)}</p>' for t in data['about'])
-about += '<h3 class="small-heading">Research interests</h3><ul class="interests">' + ''.join(f'<li>{e(t)}</li>' for t in data['interests'])+'</ul>'
 news = heading('news','News')+'<ul class="dated-list news-list">'
 for n in data['news']:
     image = entry_image(n, 'news')
     news += (f'<li><span class="date">{e(n["date"])}</span>'
              f'<div class="news-body{" has-image" if image else ""}"><p class="news-text">{link(n["url"],n["text"])}</p>{image}</div></li>')
 news += '</ul>'
-education = heading('education','Education background')+''.join(entry(n['institution'],n['degree'],n['dates'],n['detail']) for n in data['education'])
-experience = heading('experience','Work experience')+''.join(entry(n['role'],n['institution'],n['dates'],n['detail']) for n in data['experience'])
+education = heading('education','Education background')+''.join(entry(n['institution'],n['degree'],n['dates'],n['detail'],n) for n in data['education'])
+experience = heading('experience','Work experience')+''.join(entry(n['role'],n['institution'],n['dates'],n['detail'],n) for n in data['experience'])
 pubs = [n for n in data['publications'] if n.get('visible',True)]
 publications = heading('publications','Publications','Published and accepted work, preprints, and ongoing manuscripts.')
 publications += '''<div class="publication-tools" hidden><div class="filters" role="group" aria-label="Filter publications">'''
@@ -97,7 +129,10 @@ for n in data['reports']:
 services=heading('services','Services')+'<h3>Journal reviewing</h3><p>I have reviewed manuscripts for:</p><ul class="reviewing">'+''.join(f'<li>{e(n)}</li>' for n in data['services']['reviewing'])+'</ul><h3>Mentorship and teaching</h3>'
 services+=''.join(entry(n['title'],'',n['dates'],n['detail']) for n in data['services']['teaching'])
 awards=heading('awards','Honors and awards')+'<ul class="dated-list awards-list">'+''.join(f'<li><span class="date">{e(n["year"])}</span><span>{e(n["title"])}</span></li>' for n in data['awards'])+'</ul>'
-content=''.join(f'<section class="content-section" aria-labelledby="{anchor}">{body}</section>' for (anchor,_),body in zip(sections,[about,news,education,experience,publications,services,awards]))
+section_content = dict(about=about, news=news, education=education, experience=experience, publications=publications, services=services, awards=awards)
+if research_config.get('visible', False):
+    section_content['research'] = research_section(research_config)
+content=''.join(f'<section class="content-section" aria-labelledby="{anchor}">{section_content[anchor]}</section>' for anchor,_ in sections)
 cloudflare_site_token = data.get('analytics', {}).get('cloudflare_site_token', '').strip()
 analytics_script = ''
 if cloudflare_site_token:
@@ -121,7 +156,7 @@ shutil.copytree(ROOT/'assets',OUT/'assets',dirs_exist_ok=True)
 (OUT/'.nojekyll').touch()
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: https://haohuresearch.github.io/sitemap.xml\n',encoding='utf-8')
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://haohuresearch.github.io/</loc></url></urlset>\n',encoding='utf-8')
-assert len(re.findall(r'<section class="content-section"',html)) == 7
+assert len(re.findall(r'<section class="content-section"',html)) == len(sections)
 assert html.count('class="publication"') == len(pubs)
 assert all(f'id="{anchor}"' in html for anchor,_ in sections)
-print(f'Built dist/index.html: 7 sections, {len(pubs)} publications, {len(data["reports"])} report, {len(data["awards"])} awards.')
+print(f'Built dist/index.html: {len(sections)} sections, {len(pubs)} publications, {len(data["reports"])} report, {len(data["awards"])} awards.')

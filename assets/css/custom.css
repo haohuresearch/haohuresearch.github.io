@@ -22,3 +22,26 @@
 .entry-media figcaption{font-family:Arial,sans-serif;font-size:10px;line-height:1.5;color:var(--muted);margin-top:6px;overflow-wrap:anywhere}
 @media(max-width:1000px){.news-body.has-image{grid-template-columns:minmax(0,1fr) 130px;gap:14px}.paper-entry.has-image{grid-template-columns:140px minmax(0,1fr);gap:16px}}
 @media(max-width:740px){.news-list li{grid-template-columns:48px minmax(0,1fr)}.news-body.has-image,.paper-entry.has-image{display:flex;flex-direction:column;gap:12px}.news-media{width:100%;max-width:360px}.paper-media{width:100%;max-width:360px}.paper-details{width:100%}.entry-media figcaption{font-size:11px}.news-list li:has(.news-media){margin-bottom:24px}}
+
+/* Optional institution logos and research chapters. */
+.entry-body{min-width:0}
+.institution-entry.has-image{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:start;gap:18px}
+.institution-media .image-full-link{padding:6px;background:white}
+.institution-media img{aspect-ratio:1;object-fit:contain;background:white}
+.research-hero-media{margin:22px 0 28px}
+.research-hero-media img{aspect-ratio:4/1;max-height:240px;object-fit:contain}
+.research-contents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0 32px}
+.research-contents a{display:flex;flex-direction:column;gap:8px;min-width:0;padding:16px 14px;background:var(--wash);border:1px solid var(--line);border-top:2px solid var(--accent);border-radius:3px;color:var(--navy);text-align:center;text-decoration:none}
+.research-contents a:hover{border-color:var(--accent);background:#edf4f5}
+.research-number{font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;color:var(--accent)}
+.research-topic{font-size:14px;font-weight:700;line-height:1.45;overflow-wrap:anywhere}
+.research-summary{font-family:Arial,sans-serif;font-size:11px;line-height:1.5;color:var(--muted)}
+.research-chapter{margin:30px 0 36px}
+.research-chapter>h3{padding:10px 13px;border-left:3px solid var(--accent);background:var(--wash);font-size:16px;line-height:1.5;margin:0 0 18px;scroll-margin-top:25px}
+.research-chapter p,.research-bullets{font-size:14px;line-height:1.7}
+.research-bullets{padding-left:20px}.research-bullets li{margin-bottom:9px}
+.research-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;margin-top:22px;align-items:start}
+.research-gallery:has(>figure:only-child){grid-template-columns:1fr}
+.research-media img{aspect-ratio:auto;height:auto}
+.research-media figcaption{font-size:11px;line-height:1.65}
+@media(max-width:740px){.social-links{max-width:320px;margin-inline:auto}.institution-entry.has-image{grid-template-columns:54px minmax(0,1fr);gap:12px}.research-contents{grid-template-columns:1fr;gap:9px;margin:20px 0 26px}.research-contents a{text-align:left;padding:12px 14px}.research-gallery{grid-template-columns:1fr;gap:20px}.research-hero-media img{aspect-ratio:auto;height:auto;max-height:none}.research-chapter>h3{font-size:15px}.research-chapter p,.research-bullets{font-size:13px}}

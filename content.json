@@ -11,18 +11,13 @@
     "linkedin": "https://www.linkedin.com/in/hao-hu-usc/",
     "github": "https://github.com/haohuresearch",
     "Xiaohongshu": "https://xhslink.cn/o/7szWcxAXHuD",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "xiaohongshu": "https://xhslink.cn/o/7szWcxAXHuD"
   },
   "about": [
     "I am a third-year Ph.D. student in Environmental Engineering at the University of Southern California, advised by Jiachen Zhang. I received my bachelor’s degrees in Engineering and Economics from Tsinghua University.",
     "My research examines the interactions among climate, the built environment, and energy infrastructure. I study how urban form and anthropogenic heat shape local climate, how climate change affects energy and water use, and how we can design more resilient energy systems.",
-    "A particular focus of my work is data centers: their local climate impacts, cooling resources and technologies, infrastructure siting, and opportunities for waste-heat recovery. My work draws on atmospheric modeling, energy-system analysis, economics, and machine learning, informed by experience in the nuclear energy industry."
-  ],
-  "interests": [
-    "Urban climate & anthropogenic heat",
-    "Data centers & sustainable cooling",
-    "Climate-resilient energy systems",
-    "Air quality & public health"
+    "A particular focus of my work is data centers: their local climate impacts, cooling resources and technologies, infrastructure siting, and opportunities for waste-heat recovery. My work draws on atmospheric modeling, energy-system analysis, economics, and machine learning."
   ],
   "news": [
     {
@@ -80,21 +75,30 @@
       "location": "Los Angeles, USA",
       "dates": "Aug 2024 – Present",
       "degree": "Ph.D. in Environmental Engineering; M.S. in Sustainable Engineering",
-      "detail": "Department of Civil and Environmental Engineering · Advisor: Jiachen Zhang"
+      "detail": "Department of Civil and Environmental Engineering · Advisor: Jiachen Zhang",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "institution": "Tsinghua University",
       "location": "Beijing, China",
       "dates": "Aug 2018 – Jun 2022",
       "degree": "B.Eng. in Engineering",
-      "detail": "Department of Engineering Physics · Advisor: Ming Zeng"
+      "detail": "Department of Engineering Physics · Advisor: Ming Zeng",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "institution": "Tsinghua University",
       "location": "Beijing, China",
       "dates": "Sep 2019 – Jun 2022",
       "degree": "B.Econ. in Economics",
-      "detail": "School of Economics and Management · Advisor: Wenlan Luo"
+      "detail": "School of Economics and Management · Advisor: Wenlan Luo",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     }
   ],
   "experience": [
@@ -102,31 +106,37 @@
       "role": "Research Assistant",
       "institution": "University of Southern California",
       "dates": "Aug 2024 – Present",
-      "detail": "Department of Civil and Environmental Engineering."
+      "detail": "Department of Civil and Environmental Engineering.",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "role": "Research Assistant · Part-time",
       "institution": "Cardiff University, School of Engineering",
       "dates": "Mar 2023 – Mar 2025",
-      "detail": "Advisor: Pan He. Econometric research on temperature and food safety; pesticide-residue database development."
+      "detail": "Advisor: Pan He. Econometric research on temperature and food safety; pesticide-residue database development.",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "role": "Research Assistant · Part-time",
       "institution": "Peking University",
       "dates": "May 2023 – Jul 2023",
-      "detail": "Advisor: Qiangming Yan. Applied weighted stochastic block modeling to international trade patterns."
-    },
-    {
-      "role": "Research and Development Engineer",
-      "institution": "CNNC China Nuclear Power Engineering Co., Ltd.",
-      "dates": "Jul 2022 – Nov 2023",
-      "detail": "Full-time engineering appointment in Beijing, China."
+      "detail": "Advisor: Qiangming Yan. Applied weighted stochastic block modeling to international trade patterns.",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "role": "Research Assistant",
       "institution": "Tsinghua University",
       "dates": "Oct 2021 – Aug 2024",
-      "detail": "Institute of Energy, Environment and Economy (3E). Research on waste-heat recovery and building heating demand."
+      "detail": "Institute of Energy, Environment and Economy (3E). Research on waste-heat recovery and building heating demand.",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     }
   ],
   "publications": [
@@ -316,5 +326,57 @@
   ],
   "analytics": {
     "cloudflare_site_token": "656d37e659e84056a5b0b0d49d0fab0b"
+  },
+  "research": {
+    "visible": false,
+    "title": "Research",
+    "intro": [],
+    "image": "",
+    "image_alt": "",
+    "image_caption": "",
+    "chapters": [
+      {
+        "visible": true,
+        "title": "Research direction 1",
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "images": [
+          {
+            "image": "",
+            "image_alt": "",
+            "image_caption": ""
+          }
+        ]
+      },
+      {
+        "visible": true,
+        "title": "Research direction 2",
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "images": [
+          {
+            "image": "",
+            "image_alt": "",
+            "image_caption": ""
+          }
+        ]
+      },
+      {
+        "visible": true,
+        "title": "Research direction 3",
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "images": [
+          {
+            "image": "",
+            "image_alt": "",
+            "image_caption": ""
+          }
+        ]
+      }
+    ]
   }
 }
