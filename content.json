@@ -1,0 +1,296 @@
+{
+  "profile": {
+    "name": "Hao Hu",
+    "position": "Ph.D. Student in Environmental Engineering",
+    "affiliation": "University of Southern California",
+    "department": "Civil and Environmental Engineering",
+    "location": "Los Angeles, California",
+    "email": "hu.hao@usc.edu",
+    "portrait": "assets/img/portrait.png",
+    "scholar": "https://scholar.google.com/citations?user=aYDbQJgAAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/hao-hu-usc/",
+    "github": "https://github.com/haohuresearch",
+    "updated": "October 2026"
+  },
+  "about": [
+    "I am a Ph.D. student in Environmental Engineering at the University of Southern California, advised by Jiachen Zhang. I received my bachelor’s degrees in Engineering and Economics from Tsinghua University.",
+    "My research examines the interactions among climate, the built environment, and energy infrastructure. I study how urban form and anthropogenic heat shape local climate, how climate change affects energy and water use, and how we can design more resilient energy systems.",
+    "A particular focus of my work is data centers: their local climate impacts, cooling resources and technologies, infrastructure siting, and opportunities for waste-heat recovery. My work draws on atmospheric modeling, energy-system analysis, economics, and machine learning, informed by experience in the nuclear energy industry."
+  ],
+  "interests": [
+    "Urban climate & anthropogenic heat",
+    "Data centers & sustainable cooling",
+    "Climate-resilient energy systems",
+    "Air quality & public health"
+  ],
+  "news": [
+    {
+      "date": "2026",
+      "text": "Received the CESASC Jonathan H. Jiang (JHJ) Physics Prize.",
+      "url": ""
+    },
+    {
+      "date": "2026",
+      "text": "Our study of urban morphology, meteorology, and heat stress in Southern California was published in JGR: Atmospheres.",
+      "url": "https://doi.org/10.1029/2025JD045318"
+    },
+    {
+      "date": "2026",
+      "text": "Our study of anthropogenic heat in Los Angeles was published in JGR: Atmospheres (co-first author).",
+      "url": "https://doi.org/10.1029/2026JD046326"
+    },
+    {
+      "date": "2026",
+      "text": "Our study of emissions from the 2025 Los Angeles fires was accepted by ACS ES&T Air.",
+      "url": "https://doi.org/10.1021/acsestair.6c00107"
+    },
+    {
+      "date": "2025",
+      "text": "Received the USC Viterbi Das Family Travel Award and an A&WMA Student Scholarship.",
+      "url": ""
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Southern California",
+      "location": "Los Angeles, USA",
+      "dates": "Aug 2024 – Present",
+      "degree": "Ph.D. in Environmental Engineering; M.S. in Sustainable Engineering",
+      "detail": "Department of Civil and Environmental Engineering · Advisor: Jiachen Zhang"
+    },
+    {
+      "institution": "Tsinghua University",
+      "location": "Beijing, China",
+      "dates": "Aug 2018 – Jun 2022",
+      "degree": "B.Eng. in Engineering",
+      "detail": "Department of Engineering Physics · Advisor: Ming Zeng"
+    },
+    {
+      "institution": "Tsinghua University",
+      "location": "Beijing, China",
+      "dates": "Sep 2019 – Jun 2022",
+      "degree": "B.Econ. in Economics",
+      "detail": "School of Economics and Management · Advisor: Wenlan Luo"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Assistant",
+      "institution": "University of Southern California",
+      "dates": "Aug 2024 – Present",
+      "detail": "Department of Civil and Environmental Engineering."
+    },
+    {
+      "role": "Research Assistant · Part-time",
+      "institution": "Cardiff University, School of Engineering",
+      "dates": "Mar 2023 – Mar 2025",
+      "detail": "Advisor: Pan He. Econometric research on temperature and food safety; pesticide-residue database development."
+    },
+    {
+      "role": "Research Assistant · Part-time",
+      "institution": "Peking University",
+      "dates": "May 2023 – Jul 2023",
+      "detail": "Advisor: Qiangming Yan. Applied weighted stochastic block modeling to international trade patterns."
+    },
+    {
+      "role": "Research and Development Engineer",
+      "institution": "CNNC China Nuclear Power Engineering Co., Ltd.",
+      "dates": "Jul 2022 – Nov 2023",
+      "detail": "Full-time engineering appointment in Beijing, China."
+    },
+    {
+      "role": "Research Assistant",
+      "institution": "Tsinghua University",
+      "dates": "Oct 2021 – Aug 2024",
+      "detail": "Institute of Energy, Environment and Economy (3E). Research on waste-heat recovery and building heating demand."
+    }
+  ],
+  "publications": [
+    {
+      "title": "Quantifying Urban Morphology-Induced Uncertainty in Urban Meteorology and Heat Stress Simulations in Southern California.",
+      "authors": "Hao Hu, Xinyi Zhang, Cenlin He, Ellis Fertig, Reza Zarrin, Soroush E. Neyestani, Jiachen Zhang",
+      "venue": "Journal of Geophysical Research: Atmospheres, 131(4), e2025JD045318 (2026).",
+      "status": "Published",
+      "group": "published",
+      "url": "https://doi.org/10.1029/2025JD045318",
+      "visible": true
+    },
+    {
+      "title": "Modeling the Distribution, Impacts, and Mitigation of Anthropogenic Heat in Los Angeles.",
+      "authors": "Joseph Ko#, Hao Hu#, Yun Li, Hannah Schlaerth, Stepp Mayes, McKenna Peplinski, Andrew Jin, Dan Li, Pouya Vahmani, Kelly Sanders, George Ban-Weiss, Jiachen Zhang",
+      "venue": "Journal of Geophysical Research: Atmospheres, 131(4), e2026JD046326 (2026).",
+      "status": "Published · Co-first author",
+      "group": "published",
+      "url": "https://doi.org/10.1029/2026JD046326",
+      "visible": true
+    },
+    {
+      "title": "Investigating Uncertainties in Air Pollutant Emissions of Structure and Biomass Burning from the 2025 Los Angeles Fires.",
+      "authors": "Soroush E. Neyestani, Hao Hu, Dandan Wei, Sam J. Silva, Joshua L. Laughner, Yunhan Huang, Xanthe Saalmann, Xinyi Zhang, and Jiachen Zhang",
+      "venue": "ACS ES&T Air (2026).",
+      "status": "Accepted",
+      "group": "published",
+      "url": "https://doi.org/10.1021/acsestair.6c00107",
+      "visible": true
+    },
+    {
+      "title": "Spatially concentrated heat emissions from data centers lead to localized urban warming and heat exposure.",
+      "authors": "Hao Hu, Arman Shehabi, Cenlin He, Kelly Sanders, Jiachen Zhang",
+      "venue": "Under review by Nature. Preprint on Research Square.",
+      "status": "Under review · Preprint",
+      "group": "review",
+      "url": "https://doi.org/10.21203/rs.3.rs-10271868/v1",
+      "visible": true
+    },
+    {
+      "title": "Projecting the Impacts of Climate Change on Ozone and Public Health at High Resolution in California.",
+      "authors": "Hao Hu, Yuhang Song, Xinyi Zhang, Sam Silva, Hao Ji, Ai Yi Wu Zheng, Rima Habre, Jiachen Zhang",
+      "venue": "Under review by Earth’s Future.",
+      "status": "Under review",
+      "group": "review",
+      "url": "",
+      "visible": true
+    },
+    {
+      "title": "Air quality and economic trade-offs from California gasoline volatility relaxation.",
+      "authors": "Xinyi Zhang, Hao Hu, Mohammad Mahdi Badami, Yashar Aghaei, Elyse Pennington, Sina Hasheminassab, Paul O. Wennberg, Jiachen Zhang",
+      "venue": "Submitted to PNAS. Preprint on Research Square.",
+      "status": "Submitted · Preprint",
+      "group": "review",
+      "url": "https://www.researchsquare.com/article/rs-10538621/v1",
+      "visible": true
+    },
+    {
+      "title": "Sustained sources of atmospheric CO2 during and after the 2023-24 El Niño.",
+      "authors": "Xinyu Dou, Hao Hu, Mingjuan Zhang, Pinyi Lu, Zhuo Zheng, Qinzhe Liu, Jiachen Zhang, Piyu Ke, Philippe Ciais, Fa Li, Mengze Li, Lixing Wang, Kasra Rafiezadeh Shahi, Johan Rockström, Zhu Liu, Robert Jackson",
+      "venue": "Under review by Science Advances.",
+      "status": "Under review",
+      "group": "review",
+      "url": "",
+      "visible": true
+    },
+    {
+      "title": "Air Quality Impacts of Tailpipe and Non-Tailpipe Emissions Under Zero-Emission Truck Regulations in Southern California.",
+      "authors": "Soroush E. Neyestani, Xinyi Zhang, Hao Hu, Sahar Fazelvalipour, Ling Jin, Elyse A. Penningtonc, Jill Johnston, Meredith Franklin, Rima Habre, Jiachen Zhang",
+      "venue": "Under review by ES&T.",
+      "status": "Under review",
+      "group": "review",
+      "url": "",
+      "visible": true
+    },
+    {
+      "title": "From Servers to Heaters: Harnessing Data Center Waste Heat for Northern China's Green Energy Transition.",
+      "authors": "Hao Hu, Sining Ma, Shiyan Chang, Siyue Guo, Shu Liu, Jiachen Zhang",
+      "venue": "Manuscript in preparation.",
+      "status": "In preparation",
+      "group": "preparation",
+      "url": "",
+      "visible": true
+    },
+    {
+      "title": "Climate change is reducing global data center climate cooling resources.",
+      "authors": "Hao Hu, Renzhi Jing, Jiachen Zhang",
+      "venue": "Manuscript in preparation.",
+      "status": "In preparation",
+      "group": "preparation",
+      "url": "",
+      "visible": true
+    },
+    {
+      "title": "Influence of land cover and shading on the thermal environments of schoolyards in Los Angeles.",
+      "authors": "Ronnen Levinson, Diego Ramos Aguilera, Hao Hu, Xinyi Zhang, Howdy Goudey, Aaron Diamond, Sylvia Wallis, Ilianna Padilla, and Jiachen Zhang",
+      "venue": "Manuscript in preparation.",
+      "status": "In preparation",
+      "group": "preparation",
+      "url": "",
+      "visible": true
+    }
+  ],
+  "reports": [
+    {
+      "title": "California’s Fifth Climate Change Assessment: Los Angeles Regional Report",
+      "venue": "University of California, Los Angeles (2026).",
+      "detail": "Contributing author: analysis and writing on climate-change impacts on air quality in the Los Angeles region.",
+      "url": "https://www.climateassessment.ca.gov/2795/"
+    }
+  ],
+  "services": {
+    "reviewing": [
+      "Journal of Geophysical Research: Atmospheres",
+      "Journal of Applied Meteorology and Climatology",
+      "Scientific Reports",
+      "Science Advances"
+    ],
+    "teaching": [
+      {
+        "title": "USC CURVE Program Mentor",
+        "dates": "Sep 2024 – May 2026",
+        "detail": "Mentored undergraduate research in literature review, scientific writing, coding, machine learning, data-center infrastructure, and cooling-energy analysis."
+      },
+      {
+        "title": "Teaching Assistant · CE-119",
+        "dates": "Aug 2024 – Dec 2024",
+        "detail": "Statistical Data Analysis in Engineering, University of Southern California."
+      },
+      {
+        "title": "USC International Student Mentorship Program",
+        "dates": "Jan 2025 – Dec 2025",
+        "detail": "Mentored international students in career planning, goal setting, and campus-resource use."
+      }
+    ]
+  },
+  "awards": [
+    {
+      "year": "2026",
+      "title": "CESASC Jonathan H. Jiang (JHJ) Physics Prize"
+    },
+    {
+      "year": "2025",
+      "title": "2024 LA AEP Student Scholarship"
+    },
+    {
+      "year": "2025",
+      "title": "USC Viterbi Das Family Travel Award"
+    },
+    {
+      "year": "2025",
+      "title": "A&WMA Student Scholarship — Sustainability Research and Study Related to Air Quality"
+    },
+    {
+      "year": "2024",
+      "title": "First Place, Poster Presentation — 3rd Carbon Neutrality Forum for Doctoral Students"
+    },
+    {
+      "year": "2024",
+      "title": "Gold Medal Team (Team Leader), Net-Zero Future Competition"
+    },
+    {
+      "year": "2024",
+      "title": "CURVE Mentor Fellowship, USC Viterbi"
+    },
+    {
+      "year": "2021",
+      "title": "Friends of Tsinghua Xitai Scholarship (top 2 of 60 in DEP)"
+    },
+    {
+      "year": "2021",
+      "title": "Outstanding Communist Youth League Member, Tsinghua University (5 of 130 in DEP)"
+    },
+    {
+      "year": "2020",
+      "title": "He Dongchang Scholarship, Tsinghua University (top 15 of 130 in DEP)"
+    },
+    {
+      "year": "2020",
+      "title": "Friends of Tsinghua Tellhow Scholarship"
+    },
+    {
+      "year": "2019",
+      "title": "Tsinghua University Comprehensive Excellence Award — “12·9” Scholarship (top 2% of 3,500)"
+    },
+    {
+      "year": "2019",
+      "title": "Outstanding Student Leader, Department of Engineering Physics (7 of 130)"
+    }
+  ]
+}
