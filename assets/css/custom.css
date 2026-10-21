@@ -12,6 +12,9 @@
 .news-body.has-image{display:grid;grid-template-columns:minmax(0,1fr) 168px;align-items:start;gap:18px}
 .news-list li:has(.news-media){margin-bottom:22px}
 .paper-entry.has-image{display:grid;grid-template-columns:168px minmax(0,1fr);align-items:start;gap:20px}
+.publication:has(.paper-media){position:relative}
+.publication:has(.paper-media)::marker{content:""}
+.publication:has(.paper-media)::before{content:counter(list-item) ".";position:absolute;left:-17px;top:1px;font-family:Arial,sans-serif;font-size:11px;color:var(--muted)}
 .entry-media{margin:0;min-width:0}
 .image-full-link{display:block;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fafcfc}
 .image-full-link:hover{border-color:var(--accent)}
