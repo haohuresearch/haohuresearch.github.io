@@ -2,7 +2,7 @@
 import json
 import re
 import shutil
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from html import escape
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +23,25 @@ def heading(anchor, title, subtitle=''):
 def entry(title, sub, dates, detail):
     return f'<article class="entry"><div class="entry-heading"><h3>{e(title)}</h3><span class="date">{e(dates)}</span></div><p class="entry-sub">{e(sub)}</p><p class="entry-detail">{e(detail)}</p></article>'
 
+def entry_image(item, kind):
+    """Optional local thumbnail; keep the full image available without cropping."""
+    src = item.get('image', '').strip()
+    if not src:
+        return ''
+    path = PurePosixPath(src)
+    if (path.parts[:2] != ('assets', 'img') or '..' in path.parts
+            or '\\' in src or path.suffix.lower() not in ('.png', '.jpg', '.jpeg', '.webp', '.gif', '.svg', '.avif')):
+        raise ValueError('Image must be a relative path under assets/img/: ' + src)
+    image_path = (ROOT / src).resolve()
+    if not image_path.is_relative_to((ROOT / 'assets' / 'img').resolve()) or not image_path.is_file():
+        raise ValueError('Image file not found under assets/img/: ' + src)
+    alt = item.get('image_alt', '').strip() or item.get('title') or item.get('text', 'Research image')
+    caption = item.get('image_caption', '').strip()
+    return (f'<figure class="entry-media {kind}-media">'
+            f'<a class="image-full-link" href="{e(src)}" target="_blank" rel="noopener" aria-label="View full image: {e(alt)}">'
+            f'<img src="{e(src)}" alt="{e(alt)}" width="640" height="400" loading="lazy" decoding="async"></a>'
+            + (f'<figcaption>{e(caption)}</figcaption>' if caption else '') + '</figure>')
+
 p = data['profile']
 sections = [('about','About me'),('news','News'),('education','Education background'),('experience','Work experience'),('publications','Publications'),('services','Services'),('awards','Awards')]
 navigation = ''.join(f'<a href="#{anchor}">{title}</a>' for anchor,title in sections)
@@ -40,7 +59,12 @@ profile = f'''<header class="profile" id="profile">
 
 about = heading('about','About me') + ''.join(f'<p>{e(t)}</p>' for t in data['about'])
 about += '<h3 class="small-heading">Research interests</h3><ul class="interests">' + ''.join(f'<li>{e(t)}</li>' for t in data['interests'])+'</ul>'
-news = heading('news','News')+'<ul class="dated-list news-list">'+''.join(f'<li><span class="date">{e(n["date"])}</span><span>{link(n["url"],n["text"])}</span></li>' for n in data['news'])+'</ul>'
+news = heading('news','News')+'<ul class="dated-list news-list">'
+for n in data['news']:
+    image = entry_image(n, 'news')
+    news += (f'<li><span class="date">{e(n["date"])}</span>'
+             f'<div class="news-body{" has-image" if image else ""}"><p class="news-text">{link(n["url"],n["text"])}</p>{image}</div></li>')
+news += '</ul>'
 education = heading('education','Education background')+''.join(entry(n['institution'],n['degree'],n['dates'],n['detail']) for n in data['education'])
 experience = heading('experience','Work experience')+''.join(entry(n['role'],n['institution'],n['dates'],n['detail']) for n in data['experience'])
 pubs = [n for n in data['publications'] if n.get('visible',True)]
@@ -60,10 +84,12 @@ for group,label in [('published','Published or accepted'),('review','Preprints a
         authors = e(n['authors']).replace('Hao Hu#','<strong>Hao Hu</strong><sup>#</sup>').replace('Hao Hu','<strong>Hao Hu</strong>')
         authors = authors.replace('<strong><strong>Hao Hu</strong></strong>','<strong>Hao Hu</strong>')
         title = link(n['url'],n['title']) if n['url'] else e(n['title'])
-        publications += f'<li class="publication"><div class="paper-title">{title}</div><p class="authors">{authors}.</p><p class="venue">{e(n["venue"])}</p><span class="status status-{group}">{e(n["status"])}</span>'
+        image = entry_image(n, 'paper')
+        publications += (f'<li class="publication"><div class="paper-entry{" has-image" if image else ""}">{image}'
+                         f'<div class="paper-details"><div class="paper-title">{title}</div><p class="authors">{authors}.</p><p class="venue">{e(n["venue"])}</p><span class="status status-{group}">{e(n["status"])}</span>')
         if n['url']:
             publications += ' '+link(n['url'],'Preprint ↗' if group=='review' else 'Paper ↗','paper-link')
-        publications += '</li>'
+        publications += '</div></div></li>'
     publications += '</ol></div>'
 publications += '<p class="empty-state" hidden>No matching publications. Try another search term or filter.</p><p class="cofirst-note"># Co-first authors.</p><h3 class="report-heading">Reports and assessments</h3>'
 for n in data['reports']:

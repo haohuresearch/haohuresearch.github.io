@@ -27,32 +27,50 @@
     {
       "date": "2026/10",
       "text": "The California’s Fifth Climate Change Assessment: Los Angeles Regional Report (2026), which I contributed to as an author, is now available online!",
-      "url": "https://climateassessment.ca.gov/2795/"
+      "url": "https://climateassessment.ca.gov/2795/",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "date": "2026/10",
       "text": "I attended SEMICON West 2026 in San Francisco, it is a really amazing conference!",
-      "url": "https://registration.semiconwest.org/2026_semicon_west/11411919"
+      "url": "https://registration.semiconwest.org/2026_semicon_west/11411919",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "date": "2026/07",
       "text": "Our study of emissions from the 2025 Los Angeles fires was accepted by ACS ES&T Air.",
-      "url": "https://doi.org/10.1021/acsestair.6c00107"
+      "url": "https://doi.org/10.1021/acsestair.6c00107",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "date": "2026/06",
       "text": "Our study of anthropogenic heat in Los Angeles was published in JGR: Atmospheres (co-first author).",
-      "url": "https://doi.org/10.1029/2026JD046326"
+      "url": "https://doi.org/10.1029/2026JD046326",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "date": "2026/05",
       "text": "I am so honored to received the CESASC Jonathan H. Jiang (JHJ) Physics Prize and present my research in the 64th CESASC Annual Convention.",
-      "url": "https://cesasc.github.io/scholarship/jhj-prize.html"
+      "url": "https://cesasc.github.io/scholarship/jhj-prize.html",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "date": "2026/02",
       "text": "I am so happy that my first research paper was published in *Journal of Geophysical Research: Atmospheres* (JGR: Atmospheres)!",
-      "url": "https://doi.org/10.1029/2025JD045318"
+      "url": "https://doi.org/10.1029/2025JD045318",
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     }
   ],
   "education": [
@@ -118,7 +136,10 @@
       "status": "Published",
       "group": "published",
       "url": "https://doi.org/10.1029/2025JD045318",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "title": "Modeling the Distribution, Impacts, and Mitigation of Anthropogenic Heat in Los Angeles.",
@@ -127,7 +148,10 @@
       "status": "Published · Co-first author",
       "group": "published",
       "url": "https://doi.org/10.1029/2026JD046326",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "title": "Investigating Uncertainties in Air Pollutant Emissions of Structure and Biomass Burning from the 2025 Los Angeles Fires.",
@@ -136,7 +160,10 @@
       "status": "Published",
       "group": "published",
       "url": "https://doi.org/10.1021/acsestair.6c00107",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "title": "Spatially concentrated heat emissions from data centers lead to localized urban warming and heat exposure.",
@@ -145,7 +172,10 @@
       "status": "Under review · Preprint",
       "group": "review",
       "url": "https://doi.org/10.21203/rs.3.rs-10271868/v1",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "title": "Projecting the Impacts of Climate Change on Ozone and Public Health at High Resolution in California.",
@@ -154,7 +184,10 @@
       "status": "Under review",
       "group": "review",
       "url": "",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "title": "Air quality and economic trade-offs from California gasoline volatility relaxation.",
@@ -163,7 +196,10 @@
       "status": "Submitted",
       "group": "review",
       "url": "https://www.researchsquare.com/article/rs-10538621/v1",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "title": "Sustained sources of atmospheric CO2 during and after the 2023-24 El Niño.",
@@ -172,7 +208,10 @@
       "status": "Under review",
       "group": "review",
       "url": "",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     },
     {
       "title": "Air Quality Impacts of Tailpipe and Non-Tailpipe Emissions Under Zero-Emission Truck Regulations in Southern California.",
@@ -181,7 +220,10 @@
       "status": "Under review",
       "group": "review",
       "url": "",
-      "visible": true
+      "visible": true,
+      "image": "",
+      "image_alt": "",
+      "image_caption": ""
     }
   ],
   "reports": [
