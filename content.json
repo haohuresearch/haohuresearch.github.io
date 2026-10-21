@@ -13,7 +13,7 @@
     "updated": "October 2026"
   },
   "about": [
-    "I am a Ph.D. student in Environmental Engineering at the University of Southern California, advised by Jiachen Zhang. I received my bachelor’s degrees in Engineering and Economics from Tsinghua University.",
+    "I am a third-year Ph.D. student in Environmental Engineering at the University of Southern California, advised by Jiachen Zhang. I received my bachelor’s degrees in Engineering and Economics from Tsinghua University.",
     "My research examines the interactions among climate, the built environment, and energy infrastructure. I study how urban form and anthropogenic heat shape local climate, how climate change affects energy and water use, and how we can design more resilient energy systems.",
     "A particular focus of my work is data centers: their local climate impacts, cooling resources and technologies, infrastructure siting, and opportunities for waste-heat recovery. My work draws on atmospheric modeling, energy-system analysis, economics, and machine learning, informed by experience in the nuclear energy industry."
   ],
@@ -25,30 +25,40 @@
   ],
   "news": [
     {
-      "date": "2026",
-      "text": "Received the CESASC Jonathan H. Jiang (JHJ) Physics Prize.",
-      "url": ""
+      "date": "2026/10",
+      "text": "The California’s Fifth Climate Change Assessment: Los Angeles Regional Report (2026), which I contributed to as an author, is now available online!",
+      "url": "https://climateassessment.ca.gov/2795/"
     },
     {
-      "date": "2026",
-      "text": "Our study of urban morphology, meteorology, and heat stress in Southern California was published in JGR: Atmospheres.",
-      "url": "https://doi.org/10.1029/2025JD045318"
+      "date": "2026/10",
+      "text": "I attended SEMICON West 2026 in San Francisco, it is a really amazing conference!",
+      "url": "https://registration.semiconwest.org/2026_semicon_west/11411919"
     },
+    
     {
-      "date": "2026",
-      "text": "Our study of anthropogenic heat in Los Angeles was published in JGR: Atmospheres (co-first author).",
-      "url": "https://doi.org/10.1029/2026JD046326"
-    },
-    {
-      "date": "2026",
+      "date": "2026/07",
       "text": "Our study of emissions from the 2025 Los Angeles fires was accepted by ACS ES&T Air.",
       "url": "https://doi.org/10.1021/acsestair.6c00107"
     },
+    
     {
-      "date": "2025",
-      "text": "Received the USC Viterbi Das Family Travel Award and an A&WMA Student Scholarship.",
-      "url": ""
-    }
+      "date": "2026/06",
+      "text": "Our study of anthropogenic heat in Los Angeles was published in JGR: Atmospheres (co-first author).",
+      "url": "https://doi.org/10.1029/2026JD046326"
+    },
+    
+    {
+      "date": "2026/05",
+      "text": "I am so honored to received the CESASC Jonathan H. Jiang (JHJ) Physics Prize and present my research in the 64th CESASC Annual Convention.",
+      "url": "https://cesasc.github.io/scholarship/jhj-prize.html"
+    },
+    
+    {
+      "date": "2026/02",
+      "text": "I am so happy that my first research paper was published in *Journal of Geophysical Research: Atmospheres* (JGR: Atmospheres)!",
+      "url": "https://doi.org/10.1029/2025JD045318"
+    },
+
   ],
   "education": [
     {
@@ -73,6 +83,7 @@
       "detail": "School of Economics and Management · Advisor: Wenlan Luo"
     }
   ],
+  
   "experience": [
     {
       "role": "Research Assistant",
@@ -105,6 +116,7 @@
       "detail": "Institute of Energy, Environment and Economy (3E). Research on waste-heat recovery and building heating demand."
     }
   ],
+  
   "publications": [
     {
       "title": "Quantifying Urban Morphology-Induced Uncertainty in Urban Meteorology and Heat Stress Simulations in Southern California.",
@@ -128,11 +140,12 @@
       "title": "Investigating Uncertainties in Air Pollutant Emissions of Structure and Biomass Burning from the 2025 Los Angeles Fires.",
       "authors": "Soroush E. Neyestani, Hao Hu, Dandan Wei, Sam J. Silva, Joshua L. Laughner, Yunhan Huang, Xanthe Saalmann, Xinyi Zhang, and Jiachen Zhang",
       "venue": "ACS ES&T Air (2026).",
-      "status": "Accepted",
+      "status": "Published",
       "group": "published",
       "url": "https://doi.org/10.1021/acsestair.6c00107",
       "visible": true
     },
+    
     {
       "title": "Spatially concentrated heat emissions from data centers lead to localized urban warming and heat exposure.",
       "authors": "Hao Hu, Arman Shehabi, Cenlin He, Kelly Sanders, Jiachen Zhang",
@@ -142,10 +155,11 @@
       "url": "https://doi.org/10.21203/rs.3.rs-10271868/v1",
       "visible": true
     },
+    
     {
       "title": "Projecting the Impacts of Climate Change on Ozone and Public Health at High Resolution in California.",
       "authors": "Hao Hu, Yuhang Song, Xinyi Zhang, Sam Silva, Hao Ji, Ai Yi Wu Zheng, Rima Habre, Jiachen Zhang",
-      "venue": "Under review by Earth’s Future.",
+      "venue": "Under review",
       "status": "Under review",
       "group": "review",
       "url": "",
@@ -154,8 +168,8 @@
     {
       "title": "Air quality and economic trade-offs from California gasoline volatility relaxation.",
       "authors": "Xinyi Zhang, Hao Hu, Mohammad Mahdi Badami, Yashar Aghaei, Elyse Pennington, Sina Hasheminassab, Paul O. Wennberg, Jiachen Zhang",
-      "venue": "Submitted to PNAS. Preprint on Research Square.",
-      "status": "Submitted · Preprint",
+      "venue": "Submitted",
+      "status": "Submitted",
       "group": "review",
       "url": "https://www.researchsquare.com/article/rs-10538621/v1",
       "visible": true
@@ -163,7 +177,7 @@
     {
       "title": "Sustained sources of atmospheric CO2 during and after the 2023-24 El Niño.",
       "authors": "Xinyu Dou, Hao Hu, Mingjuan Zhang, Pinyi Lu, Zhuo Zheng, Qinzhe Liu, Jiachen Zhang, Piyu Ke, Philippe Ciais, Fa Li, Mengze Li, Lixing Wang, Kasra Rafiezadeh Shahi, Johan Rockström, Zhu Liu, Robert Jackson",
-      "venue": "Under review by Science Advances.",
+      "venue": "Under review",
       "status": "Under review",
       "group": "review",
       "url": "",
@@ -172,39 +186,12 @@
     {
       "title": "Air Quality Impacts of Tailpipe and Non-Tailpipe Emissions Under Zero-Emission Truck Regulations in Southern California.",
       "authors": "Soroush E. Neyestani, Xinyi Zhang, Hao Hu, Sahar Fazelvalipour, Ling Jin, Elyse A. Penningtonc, Jill Johnston, Meredith Franklin, Rima Habre, Jiachen Zhang",
-      "venue": "Under review by ES&T.",
+      "venue": "Under review",
       "status": "Under review",
       "group": "review",
       "url": "",
       "visible": true
     },
-    {
-      "title": "From Servers to Heaters: Harnessing Data Center Waste Heat for Northern China's Green Energy Transition.",
-      "authors": "Hao Hu, Sining Ma, Shiyan Chang, Siyue Guo, Shu Liu, Jiachen Zhang",
-      "venue": "Manuscript in preparation.",
-      "status": "In preparation",
-      "group": "preparation",
-      "url": "",
-      "visible": true
-    },
-    {
-      "title": "Climate change is reducing global data center climate cooling resources.",
-      "authors": "Hao Hu, Renzhi Jing, Jiachen Zhang",
-      "venue": "Manuscript in preparation.",
-      "status": "In preparation",
-      "group": "preparation",
-      "url": "",
-      "visible": true
-    },
-    {
-      "title": "Influence of land cover and shading on the thermal environments of schoolyards in Los Angeles.",
-      "authors": "Ronnen Levinson, Diego Ramos Aguilera, Hao Hu, Xinyi Zhang, Howdy Goudey, Aaron Diamond, Sylvia Wallis, Ilianna Padilla, and Jiachen Zhang",
-      "venue": "Manuscript in preparation.",
-      "status": "In preparation",
-      "group": "preparation",
-      "url": "",
-      "visible": true
-    }
   ],
   "reports": [
     {
