@@ -19,6 +19,12 @@
     "My research examines the interactions among climate, the built environment, and energy infrastructure. I study how urban form and anthropogenic heat shape local climate, how climate change affects energy and water use, and how we can design more resilient energy systems.",
     "A particular focus of my work is data centers: their local climate impacts, cooling resources and technologies, infrastructure siting, and opportunities for waste-heat recovery. My work draws on atmospheric modeling, energy-system analysis, economics, and machine learning."
   ],
+  "about_banner": {
+    "visible": true,
+    "image": "",
+    "image_alt": "Overview of my research interests",
+    "image_caption": ""
+  },
   "education": [
     {
       "institution": "University of Southern California",

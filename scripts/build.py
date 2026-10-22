@@ -91,6 +91,9 @@ profile = f'''<header class="profile" id="profile">
     </header>'''
 
 about = heading('about','About me') + ''.join(f'<p>{e(t)}</p>' for t in data['about'])
+about_banner = data.get('about_banner', {})
+if about_banner.get('visible', True):
+    about += entry_image(about_banner, 'about-banner')
 news = heading('news','News')+'<ul class="dated-list news-list">'
 for n in data['news']:
     image = entry_image(n, 'news')

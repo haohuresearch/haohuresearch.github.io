@@ -39,6 +39,7 @@
 .research-chapter{margin:30px 0 36px}
 .research-chapter>h3{padding:10px 13px;border-left:3px solid var(--accent);background:var(--wash);font-size:16px;line-height:1.5;margin:0 0 18px;scroll-margin-top:25px}
 .research-chapter p,.research-bullets{font-size:14px;line-height:1.7}
+.about-banner-media{width:100%;margin:24px 0 0}.about-banner-media img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain}
 .research-bullets{padding-left:20px}.research-bullets li{margin-bottom:9px}
 .research-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;margin-top:22px;align-items:start}
 .research-gallery:has(>figure:only-child){grid-template-columns:1fr}
