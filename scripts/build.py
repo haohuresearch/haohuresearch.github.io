@@ -76,7 +76,7 @@ research_config = data.get('research', {})
 sections = [('about','About me')]
 if research_config.get('visible', False):
     sections.append(('research','Research'))
-sections += [('news','News'),('publications','Publications'),('education','Education background'),('experience','Work experience'),('services','Services'),('awards','Awards')]
+sections += [('news','News'),('publications','Publication'),('education','Education background'),('experience','Work experience'),('services','Services'),('awards','Awards')]
 navigation = ''.join(f'<a href="#{anchor}">{title}</a>' for anchor,title in sections)
 social = ' · '.join(link(p[key],label) for key,label in [('scholar','Google Scholar'),('linkedin','LinkedIn'),('github','GitHub'),('xiaohongshu','Xiaohongshu')] if p.get(key))
 profile = f'''<header class="profile" id="profile">
@@ -100,30 +100,19 @@ news += '</ul>'
 education = heading('education','Education background')+''.join(entry(n['institution'],n['degree'],n['dates'],n['detail'],n) for n in data['education'])
 experience = heading('experience','Work experience')+''.join(entry(n['role'],n['institution'],n['dates'],n['detail'],n) for n in data['experience'])
 pubs = [n for n in data['publications'] if n.get('visible',True)]
-publications = heading('publications','Publications','Published and accepted work, preprints, and ongoing manuscripts.')
-publications += '''<div class="publication-tools" hidden><div class="filters" role="group" aria-label="Filter publications">'''
-for group,label in [('all','All'),('published','Published / Accepted'),('review','Preprint / Under review'),('preparation','In preparation')]:
-    count = len(pubs) if group=='all' else sum(n['group']==group for n in pubs)
-    if count == 0:
-        continue
-    publications += f'<button type="button" data-filter="{group}" aria-pressed="{"true" if group=="all" else "false"}">{label} <span>{count}</span></button>'
-publications += '</div><label class="search-label" for="publication-search">Search publications</label><input type="search" id="publication-search" placeholder="Search by title, author, or journal…" autocomplete="off"><p id="publication-count" class="result-count" aria-live="polite"></p></div>'
-for group,label in [('published','Published or accepted'),('review','Preprints and manuscripts under review'),('preparation','Manuscripts in preparation')]:
-    if not any(n['group'] == group for n in pubs):
-        continue
-    publications += f'<div class="publication-group" data-group="{group}"><h3>{label}</h3><ol class="publication-list">'
-    for n in [n for n in pubs if n['group']==group]:
-        authors = e(n['authors']).replace('Hao Hu#','<strong>Hao Hu</strong><sup>#</sup>').replace('Hao Hu','<strong>Hao Hu</strong>')
-        authors = authors.replace('<strong><strong>Hao Hu</strong></strong>','<strong>Hao Hu</strong>')
-        title = link(n['url'],n['title']) if n['url'] else e(n['title'])
-        image = entry_image(n, 'paper')
-        publications += (f'<li class="publication"><div class="paper-entry{" has-image" if image else ""}">{image}'
-                         f'<div class="paper-details"><div class="paper-title">{title}</div><p class="authors">{authors}.</p><p class="venue">{e(n["venue"])}</p><span class="status status-{group}">{e(n["status"])}</span>')
-        if n['url']:
-            publications += ' '+link(n['url'],'Preprint ↗' if group=='review' else 'Paper ↗','paper-link')
-        publications += '</div></div></li>'
-    publications += '</ol></div>'
-publications += '<p class="empty-state" hidden>No matching publications. Try another search term or filter.</p><p class="cofirst-note"># Co-first authors.</p><h3 class="report-heading">Reports and assessments</h3>'
+publications = heading('publications','Publication') + '<ol class="publication-list">'
+for n in pubs:
+    group = n['group']
+    authors = e(n['authors']).replace('Hao Hu#','<strong>Hao Hu</strong><sup>#</sup>').replace('Hao Hu','<strong>Hao Hu</strong>')
+    authors = authors.replace('<strong><strong>Hao Hu</strong></strong>','<strong>Hao Hu</strong>')
+    title = link(n['url'],n['title']) if n['url'] else e(n['title'])
+    image = entry_image(n, 'paper')
+    publications += (f'<li class="publication"><div class="paper-entry{" has-image" if image else ""}">{image}'
+                     f'<div class="paper-details"><div class="paper-title">{title}</div><p class="authors">{authors}.</p><p class="venue">{e(n["venue"])}</p><span class="status status-{group}">{e(n["status"])}</span>')
+    if n['url']:
+        publications += ' '+link(n['url'],'Preprint ↗' if group=='review' else 'Paper ↗','paper-link')
+    publications += '</div></div></li>'
+publications += '</ol><p class="cofirst-note"># Co-first authors.</p>'
 for n in data['reports']:
     publications += f'<article class="report"><h4>{link(n["url"],n["title"])}</h4><p class="venue">{e(n["venue"])}</p><p>{e(n["detail"])}</p></article>'
 services=heading('services','Services')+'<h3>Journal reviewing</h3><p>I have reviewed manuscripts for:</p><ul class="reviewing">'+''.join(f'<li>{e(n)}</li>' for n in data['services']['reviewing'])+'</ul><h3>Mentorship and teaching</h3>'
