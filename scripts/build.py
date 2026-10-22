@@ -90,7 +90,7 @@ profile = f'''<header class="profile" id="profile">
     <p class="profile-note">Climate · Cities · Energy</p>
     </header>'''
 
-about = heading('about','About me') + ''.join(f'<p>{e(t)}</p>' for t in data['about'])
+about = heading('about','About me') + ''.join('<p>' + re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', e(t)) + '</p>' for t in data['about'])
 about_banner = data.get('about_banner', {})
 if about_banner.get('visible', True):
     about += entry_image(about_banner, 'about-banner')
