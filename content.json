@@ -19,6 +19,38 @@
     "My research examines the interactions among climate, the built environment, and energy infrastructure. I study how urban form and anthropogenic heat shape local climate, how climate change affects energy and water use, and how we can design more resilient energy systems.",
     "A particular focus of my work is data centers: their local climate impacts, cooling resources and technologies, infrastructure siting, and opportunities for waste-heat recovery. My work draws on atmospheric modeling, energy-system analysis, economics, and machine learning."
   ],
+  "education": [
+    {
+      "institution": "University of Southern California",
+      "location": "Los Angeles, USA",
+      "dates": "Aug 2024 – Present",
+      "degree": "Ph.D. in Environmental Engineering; M.S. in Sustainable Engineering",
+      "detail": "Department of Civil and Environmental Engineering · Advisor: Jiachen Zhang",
+      "image": "assets/img/USC_Logo.jpg",
+      "image_alt": "",
+      "image_caption": ""
+    },
+    {
+      "institution": "Tsinghua University",
+      "location": "Beijing, China",
+      "dates": "Aug 2018 – Jun 2022",
+      "degree": "B.Eng. in Engineering",
+      "detail": "Department of Engineering Physics · Advisor: Ming Zeng",
+      "image": "assets/img/Tsinghua_Logo.jpg",
+      "image_alt": "",
+      "image_caption": ""
+    },
+    {
+      "institution": "Tsinghua University",
+      "location": "Beijing, China",
+      "dates": "Sep 2019 – Jun 2022",
+      "degree": "B.Econ. in Economics",
+      "detail": "School of Economics and Management · Advisor: Wenlan Luo",
+      "image": "assets/img/Tsinghua_Logo.jpg",
+      "image_alt": "",
+      "image_caption": ""
+    }
+  ],
   "news": [
     {
       "date": "2026/10",
@@ -40,7 +72,7 @@
       "date": "2026/07",
       "text": "Our study of emissions from the 2025 Los Angeles fires was accepted by ACS ES&T Air.",
       "url": "https://doi.org/10.1021/acsestair.6c00107",
-      "image": "assets/img/EST_Air_1.png",
+      "image": "",
       "image_alt": "",
       "image_caption": ""
     },
@@ -64,39 +96,15 @@
       "date": "2026/02",
       "text": "I am so happy that my first research paper was published in *Journal of Geophysical Research: Atmospheres* (JGR: Atmospheres)!",
       "url": "https://doi.org/10.1029/2025JD045318",
-      "image": "assets/img/JGR_A_1.jpg",
+      "image": "",
       "image_alt": "",
       "image_caption": ""
     }
-  ],
-  "education": [
     {
-      "institution": "University of Southern California",
-      "location": "Los Angeles, USA",
-      "dates": "Aug 2024 – Present",
-      "degree": "Ph.D. in Environmental Engineering; M.S. in Sustainable Engineering",
-      "detail": "Department of Civil and Environmental Engineering · Advisor: Jiachen Zhang",
-      "image": "",
-      "image_alt": "",
-      "image_caption": ""
-    },
-    {
-      "institution": "Tsinghua University",
-      "location": "Beijing, China",
-      "dates": "Aug 2018 – Jun 2022",
-      "degree": "B.Eng. in Engineering",
-      "detail": "Department of Engineering Physics · Advisor: Ming Zeng",
-      "image": "",
-      "image_alt": "",
-      "image_caption": ""
-    },
-    {
-      "institution": "Tsinghua University",
-      "location": "Beijing, China",
-      "dates": "Sep 2019 – Jun 2022",
-      "degree": "B.Econ. in Economics",
-      "detail": "School of Economics and Management · Advisor: Wenlan Luo",
-      "image": "",
+      "date": "2025/12",
+      "text": "I was pleased to attend the AGU Fall Meeting 2025 in New Orleans, Louisiana, where I presented my research titled “Quantifying Urban Morphology-Induced Uncertainty in Urban Meteorology and Heat Stress Simulations in Southern California”.",
+      "url": "",
+      "image": "assets/img/AGU_2025.png",
       "image_alt": "",
       "image_caption": ""
     }
@@ -107,7 +115,7 @@
       "institution": "University of Southern California",
       "dates": "Aug 2024 – Present",
       "detail": "Department of Civil and Environmental Engineering.",
-      "image": "",
+      "image": "assets/img/USC_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -116,7 +124,7 @@
       "institution": "Cardiff University, School of Engineering",
       "dates": "Mar 2023 – Mar 2025",
       "detail": "Advisor: Pan He. Econometric research on temperature and food safety; pesticide-residue database development.",
-      "image": "",
+      "image": "assets/img/Cardiff_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -125,7 +133,7 @@
       "institution": "Peking University",
       "dates": "May 2023 – Jul 2023",
       "detail": "Advisor: Qiangming Yan. Applied weighted stochastic block modeling to international trade patterns.",
-      "image": "",
+      "image": "assets/img/Peking_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
     },
@@ -134,7 +142,7 @@
       "institution": "Tsinghua University",
       "dates": "Oct 2021 – Aug 2024",
       "detail": "Institute of Energy, Environment and Economy (3E). Research on waste-heat recovery and building heating demand.",
-      "image": "",
+      "image": "assets/img/Tsinghua_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
     }
