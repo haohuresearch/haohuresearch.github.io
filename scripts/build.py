@@ -76,7 +76,7 @@ research_config = data.get('research', {})
 sections = [('about','About me')]
 if research_config.get('visible', False):
     sections.append(('research','Research'))
-sections += [('news','News'),('education','Education background'),('experience','Work experience'),('publications','Publications'),('services','Services'),('awards','Awards')]
+sections += [('news','News'),('publications','Publications'),('education','Education background'),('experience','Work experience'),('services','Services'),('awards','Awards')]
 navigation = ''.join(f'<a href="#{anchor}">{title}</a>' for anchor,title in sections)
 social = ' · '.join(link(p[key],label) for key,label in [('scholar','Google Scholar'),('linkedin','LinkedIn'),('github','GitHub'),('xiaohongshu','Xiaohongshu')] if p.get(key))
 profile = f'''<header class="profile" id="profile">
