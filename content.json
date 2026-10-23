@@ -122,7 +122,7 @@
       "role": "Research Assistant",
       "institution": "University of Southern California",
       "dates": "Aug 2024 – Present",
-      "detail": "Department of Civil and Environmental Engineering.",
+      "detail": "Advisor: Jiachen Zhang. Department of Civil and Environmental Engineering.",
       "image": "assets/img/USC_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
@@ -131,7 +131,7 @@
       "role": "Research Assistant · Part-time",
       "institution": "Cardiff University, School of Engineering",
       "dates": "Mar 2023 – Mar 2025",
-      "detail": "Advisor: Pan He. Econometric research on temperature and food safety; pesticide-residue database development.",
+      "detail": "Advisor: Pan He. Environmental Science and Sustainability.",
       "image": "assets/img/Cardiff_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
@@ -140,7 +140,7 @@
       "role": "Research Assistant · Part-time",
       "institution": "Peking University",
       "dates": "May 2023 – Jul 2023",
-      "detail": "Advisor: Qiangming Yan. Applied weighted stochastic block modeling to international trade patterns.",
+      "detail": "Advisor: Qiangming Yan. School of Economics.",
       "image": "assets/img/Peking_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
@@ -149,7 +149,7 @@
       "role": "Research Assistant",
       "institution": "Tsinghua University",
       "dates": "Oct 2021 – Aug 2024",
-      "detail": "Institute of Energy, Environment and Economy (3E). Research on waste-heat recovery and building heating demand.",
+      "detail": "Advisor: Prof. Shiyan Chang. Institute of Energy, Environment and Economy (3E).",
       "image": "assets/img/Tsinghua_Logo.jpg",
       "image_alt": "",
       "image_caption": ""
@@ -312,10 +312,6 @@
       "title": "Gold Medal Team (Team Leader), Net-Zero Future Competition"
     },
     {
-      "year": "2024",
-      "title": "CURVE Mentor Fellowship, USC Viterbi"
-    },
-    {
       "year": "2021",
       "title": "Friends of Tsinghua Xitai Scholarship (top 2 of 60 in DEP)"
     },
@@ -335,10 +331,6 @@
       "year": "2019",
       "title": "Tsinghua University Comprehensive Excellence Award — “12·9” Scholarship (top 2% of 3,500)"
     },
-    {
-      "year": "2019",
-      "title": "Outstanding Student Leader, Department of Engineering Physics (7 of 130)"
-    }
   ],
   "analytics": {
     "cloudflare_site_token": "656d37e659e84056a5b0b0d49d0fab0b"
