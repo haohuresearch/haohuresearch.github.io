@@ -132,7 +132,7 @@ if cloudflare_site_token:
     analytics_script = f'<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{beacon_config}"></script>'
 html=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(p['name'])} | {e(p['affiliation'])}</title>
+<title>{e(p['name'])} | USC</title>
 <meta name="description" content="Hao Hu, Ph.D. student at USC. Research on urban climate, data centers, air quality, and climate-resilient energy systems.">
 <meta name="robots" content="index, follow"><meta name="theme-color" content="#173f54">
 <link rel="canonical" href="https://haohuresearch.github.io/">
